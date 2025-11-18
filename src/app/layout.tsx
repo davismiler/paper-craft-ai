@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Lora } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import ToasterwithTheme from "@/components/ui/ToasterwithTheme";
 import { unstable_ViewTransition as ViewTransition } from "react";
 import Navbar from "@/components/Navbar";
 
-const font = Lora({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "AI Document Research",
-  description: "Generate whole research documents using AI instantly✨🔖",
+  title: "PaperCraft AI - AI-Powered Research Document Generator",
+  description: "Generate comprehensive research documents using AI instantly with PaperCraft AI✨🔖",
 };
 
 export default function RootLayout({
@@ -19,9 +19,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={font.className}>
-        <ThemeProvider attribute="class">
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.variable}>
+        <ThemeProvider attribute="class" defaultTheme="dark">
           <Navbar />
           <ViewTransition>{children}</ViewTransition>
           <ToasterwithTheme />

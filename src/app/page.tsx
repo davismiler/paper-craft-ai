@@ -20,12 +20,6 @@ import {
 import { motion as m } from "motion/react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { Instrument_Serif } from "next/font/google";
-
-const instrumentserif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: "400",
-});
 
 // Features section data
 const features = [
@@ -106,10 +100,10 @@ const benefits = [
 
 const Page = () => {
   return (
-    <div className="min-h-screen flex flex-col w-full dark:bg-neutral-900">
+    <div className="min-h-screen flex flex-col w-full theme-background">
       {/* Hero Section */}
       <section className="relative w-full py-24 min-h-dvh flex flex-col items-center justify-center overflow-hidden">
-        <div className="absolute -top-40 left-1/2 -translate-x-1/2 lg:w-2/3 h-72 bg-primary/20 rounded-full blur-[300px]" />
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 lg:w-2/3 h-72 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-full blur-[300px]" />
         <div className="container px-4 md:px-6 flex flex-col items-center text-center gap-6 pt-8 md:pt-12">
           <m.div
             initial={{ opacity: 0, y: 20 }}
@@ -119,8 +113,7 @@ const Page = () => {
           >
             <h1
               className={cn(
-                instrumentserif.className,
-                "text-4xl md:text-6xl font-bold text-glow text-focus"
+                "text-4xl md:text-6xl font-bold ai-gradient-text text-focus"
               )}
             >
               AI Document
@@ -136,8 +129,8 @@ const Page = () => {
                 className="size-12 animate-pulse md:inline hidden"
                 strokeWidth={1.1}
                 fillOpacity={1}
-                fill="#E1B10D"
-                stroke="#E1B10D"
+                fill="#60a5fa"
+                stroke="#60a5fa"
               />
             </h1>
             <p className="text-base md:text-xl text-muted-foreground max-w-4xl mt-2">
@@ -201,7 +194,7 @@ const Page = () => {
                         ))}
                     </div>
                     <Image
-                      src="/assets/Research.svg"
+                      src="/assets/Research.jpg"
                       alt=""
                       width={400}
                       className="h-auto lg:w-96 md:w-80 w-52 "
@@ -213,7 +206,7 @@ const Page = () => {
             </div>
           </m.div>
           <Image
-            src="/assets/Research.svg"
+            src="/assets/Research.jpg"
             alt=""
             width={400}
             className="h-auto w-56 sm:hidden mt-10"
@@ -233,13 +226,12 @@ const Page = () => {
       </section>
 
       {/* Features Section */}
-      <section className="w-full py-32 bg-muted/30">
+      <section className="w-full py-32 bg-black/40">
         <div className="container px-4 md:px-6 max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2
               className={cn(
-                instrumentserif.className,
-                "text-3xl md:text-6xl font-bold mb-4"
+                "text-3xl md:text-6xl font-bold mb-4 section-title"
               )}
             >
               Powerful Features
@@ -254,12 +246,12 @@ const Page = () => {
             {features.map((feature, index) => (
               <Card
                 key={`feature-${index}`}
-                className="bg-card/50 backdrop-blur-sm border-primary/10 overflow-hidden group hover:shadow-md transition-all duration-300"
+                className="glass-card overflow-hidden group hover:shadow-md transition-all duration-300 ai-card"
               >
-                <div className="absolute top-0 left-0 w-20 h-20 bg-yellow-400/50 -z-10 group-hover:translate-x-10 group-hover:translate-y-10 transition-transform duration-500 blur-3xl"></div>
+                <div className="absolute top-0 left-0 w-20 h-20 bg-gradient-to-r from-blue-500/30 via-purple-500/30 to-pink-500/30 -z-10 group-hover:translate-x-10 group-hover:translate-y-10 transition-transform duration-500 blur-3xl"></div>
                 <CardHeader className="pb-2">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-2">
-                    <feature.icon className="w-6 h-6 text-primary" />
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 flex items-center justify-center mb-2">
+                    <feature.icon className="w-6 h-6 text-blue-400" />
                   </div>
                   <CardTitle className="text-xl">{feature.title}</CardTitle>
                   <CardDescription>{feature.description}</CardDescription>
@@ -279,18 +271,10 @@ const Page = () => {
           <div className="text-center mb-12">
             <h2
               className={cn(
-                instrumentserif.className,
-                "text-3xl md:text-6xl font-bold mb-4 inline relative"
+                "text-3xl md:text-6xl font-bold mb-4 inline relative section-title"
               )}
             >
-              <Image
-                src={"/assets/circle.svg"}
-                alt="."
-                width={200}
-                height={200}
-                className="absolute -top-5 w-full rotate-2 left-0 z-10 scale-[1.3] opacity-70 drop-shadow-amber-300/20 drop-shadow-lg"
-              />
-              <span className="relative z-20">How It Works?</span>
+              How It Works?
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto mt-8">
               Generate comprehensive research documents in just a few simple
@@ -304,11 +288,11 @@ const Page = () => {
                 key={`step-${index}`}
                 className="flex flex-col items-center text-center"
               >
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 relative">
-                  <span className="text-2xl font-bold text-primary">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 flex items-center justify-center mb-4 relative">
+                  <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                     {step.number}
                   </span>
-                  <div className="absolute w-full h-full rounded-full border-2 border-dashed border-primary/30"></div>
+                  <div className="absolute w-full h-full rounded-full border-2 border-dashed border-blue-500/30"></div>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
                 <p className="text-muted-foreground">{step.description}</p>
@@ -319,16 +303,15 @@ const Page = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="w-full py-32 bg-muted/30">
+      <section className="w-full py-32 bg-black/40">
         <div className="container  max-w-7xl mx-auto px-4 md:px-6">
           <div className="text-center mb-12">
             <h2
               className={cn(
-                instrumentserif.className,
-                "text-3xl md:text-6xl font-bold mb-4"
+                "text-3xl md:text-6xl font-bold mb-4 section-title"
               )}
             >
-              Why Choose ResearchX
+              Why Choose PaperCraft AI
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Our platform offers numerous advantages for researchers, students,
@@ -340,10 +323,10 @@ const Page = () => {
             {benefits.map((benefit, index) => (
               <div
                 key={`benefit-${index}`}
-                className="flex gap-4 py-10 px-4 rounded-xl bg-card/50 backdrop-blur-sm border border-border/50 insetshadow max-w-md"
+                className="flex gap-4 py-10 px-4 rounded-xl glass-card border border-white/10 max-w-md"
               >
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex-shrink-0 flex items-center justify-center">
-                  <benefit.icon className="w-6 h-6 text-primary" />
+                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 flex-shrink-0 flex items-center justify-center">
+                  <benefit.icon className="w-6 h-6 text-blue-400" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2">
@@ -359,12 +342,11 @@ const Page = () => {
 
       {/* CTA Section */}
       <section className="w-full py-24 relative overflow-hidden">
-        <div className="absolute -bottom-60 left-1/2 -translate-x-1/2 lg:w-2/3 h-72 bg-primary/20 rounded-full blur-[300px]" />
+        <div className="absolute -bottom-60 left-1/2 -translate-x-1/2 lg:w-2/3 h-72 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-full blur-[300px]" />
         <div className="container max-w-7xl mx-auto px-4 md:px-6 flex flex-col items-center text-center">
           <h2
             className={cn(
-              instrumentserif.className,
-              "text-3xl md:text-6xl font-bold mb-6 max-w-3xl"
+              "text-3xl md:text-6xl font-bold mb-6 max-w-3xl section-title"
             )}
           >
             Ready to Transform Your Research Process?
@@ -387,7 +369,6 @@ const Page = () => {
         </div>
         <p
           className={cn(
-            instrumentserif.className,
             "absolute bottom-4 right-4 text-sm text-muted-foreground tracking-wider"
           )}
         >

@@ -11,16 +11,16 @@ const Navbar = () => {
         className="flex items-center justify-center gap-2 tracking-tight px-2 text-lg md:text-2xl"
       >
         <div className="size-8 md:size-10 rounded-full bg-gradient-to-bl from-primary to-amber-600"></div>
-        ResearchX
+        PaperCraft AI
       </Link>
       <div className="flex items-center justify-center gap-2 px-2">
         <ThemeToggle />
         <a
-          href="https://github.com/adityadomle/ResearchX"
+          href="https://github.com/davismiler/paper-craft-ai"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Button className="rounded-full">Github</Button>
+          <Button className="rounded-full border border-primary text-primary">Github</Button>
         </a>
       </div>
     </nav>

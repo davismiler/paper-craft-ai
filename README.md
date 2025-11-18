@@ -1,8 +1,8 @@
-# ResearchX ✨  
+# PaperCraft AI ✨  
 AI-Powered Research Document Generator  
 
 ## 🧠 About  
-ResearchX allows you to **generate comprehensive research documents** using advanced AI models—ideal for students, researchers, and professionals seeking to streamline their workflows.
+PaperCraft AI allows you to **generate comprehensive research documents** using advanced AI models—ideal for students, researchers, and professionals seeking to streamline their workflows.
 
 ## ✨ Features  
 - AI-Powered content generation for full research documents  

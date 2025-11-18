@@ -88,7 +88,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-background text-foreground pt-16 md:pt-24">
+    <div className="min-h-screen flex flex-col text-foreground pt-16 md:pt-24 theme-background">
       {loading && (
         <div className="fixed flex flex-col justify-center items-center inset-0 size-full z-50 bg-background/80">
           <Loader className="size-28 ease-in text-primary animate-spin mb-8" />
@@ -246,7 +246,7 @@ const Index = () => {
       </main>
 
       <footer className="py-4 px-6 border-t text-center text-sm text-muted-foreground mt-10">
-        <p>ResearchX AI • Professional Document Generator</p>
+        <p>PaperCraft AI • Professional Document Generator</p>
       </footer>
     </div>
   );
