@@ -160,36 +160,35 @@ const Page = () => {
             <div className="aspect-[16/9] bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm flex items-center justify-center">
               <div className="w-full max-w-4xl h-full p-6 flex flex-col">
                 <div className="flex items-center gap-2 mb-4">
-                  <div className="w-3 h-3 rounded-full bg-destructive"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-purple-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-pink-500"></div>
                   <div className="flex-1"></div>
                 </div>
                 <div className="flex-1 flex flex-col gap-4">
-                  <div className="h-8 w-3/4 bg-primary/10 rounded-md"></div>
+                  <div className="h-8 w-3/4 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-md"></div>
                   <div className="flex gap-4 flex-1">
-                    <div className="w-2/3 bg-primary/5 rounded-md p-4 flex flex-col gap-2">
+                    <div className="w-2/3 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-md p-4 flex flex-col gap-2">
                       {Array(6)
                         .fill(0)
                         .map((_, i) => (
                           <div
                             key={`mocktext-${i}`}
-                            className={`h-4 ${
-                              i === 0
+                            className={`h-4 ${i === 0
                                 ? "h-6 w-3/4"
                                 : i === 4
-                                ? "w-full"
-                                : i === 5
-                                ? "w-4/5"
-                                : i === 3
-                                ? "w-5/6"
-                                : "w-full"
-                            } bg-primary/10 rounded-md`}
+                                  ? "w-full"
+                                  : i === 5
+                                    ? "w-4/5"
+                                    : i === 3
+                                      ? "w-5/6"
+                                      : "w-full"
+                              } bg-gradient-to-r from-blue-500/30 via-purple-500/30 to-pink-500/30 rounded-md`}
                           ></div>
                         ))}
                     </div>
                     <Image
-                      src="/assets/Research.jpg"
+                      src="/assets/landing.svg"
                       alt=""
                       width={400}
                       className="h-auto lg:w-96 md:w-80 w-52 "
@@ -200,8 +199,9 @@ const Page = () => {
               </div>
             </div>
           </m.div>
+          
           <Image
-            src="/assets/Research.jpg"
+            src="/assets/landing.svg"
             alt=""
             width={400}
             className="h-auto w-56 sm:hidden mt-10"
