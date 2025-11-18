@@ -118,12 +118,7 @@ const Page = () => {
             >
               AI Document
               <span className="px-2 md:px-4 relative">
-                <img
-                  src={"/assets/line.svg"}
-                  alt="."
-                  className="absolute -bottom-1 left-3 z-10 w-11/12 -rotate-5"
-                />
-                <p className="inline relative z-20">Research</p>
+                <p className="inline relative z-20 ai-gradient-text">PaperCraft AI</p>
               </span>
               <Sparkles
                 className="size-12 animate-pulse md:inline hidden"
@@ -213,16 +208,6 @@ const Page = () => {
             height={100}
           />
         </div>
-        <img
-          src="/assets/dots.svg"
-          alt="."
-          className="absolute top-40 -left-20 opacity-60 hidden md:block"
-        />
-        <img
-          src="/assets/dots.svg"
-          alt="."
-          className="absolute bottom-80 -right-20 opacity-60 hidden md:block"
-        />
       </section>
 
       {/* Features Section */}
@@ -274,7 +259,7 @@ const Page = () => {
                 "text-3xl md:text-6xl font-bold mb-4 inline relative section-title"
               )}
             >
-              How It Works?
+              <span className="relative z-20 ai-gradient-text">How It Works?</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto mt-8">
               Generate comprehensive research documents in just a few simple
